@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Halaman Profile
 Route::get('/', [PagesController::class, 'homePage'])->name('homepage')->middleware('guest');
+
+// Halaman Authentikasi
+Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->middleware('guest');
+
+// Controller Admin
+Route::post('/login', [AuthController::class, 'login']);
