@@ -75,7 +75,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="/login">Login Admin</a>
+            <a class="btn-getstarted" href="/login">Login</a>
 
         </div>
     </header>
@@ -90,10 +90,9 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">Logis</span>
+                        <span class="sitename">TPA AL MUTTAQIN</span>
                     </a>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                        valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <p>Unggul dan Islami dalam Mewujudkan Masyarakat yang Berkeadaban</p>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -103,33 +102,30 @@
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Klik Cepat</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Media dan Informasi</a></li>
+                        <li><a href="#">Sarana dan Prasarana</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>Tentang TPA</h4>
                     <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Example</a></li>
+                        <li><a href="#">Example</a></li>
+                        <li><a href="#">Example</a></li>
+                        <li><a href="#">Example</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p>United States</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                    <h4>Kontak</h4>
+                    <p>Jalan PDAM Km 12 Rt 18
+                        Karang Joang, Balikpapan Utara
+                        Indonesia</p>
+                    <p class="mt-4"><strong>Whatsapp:</strong> <span>0852 4650 6780</span></p>
                     <p><strong>Email:</strong> <span>info@example.com</span></p>
                 </div>
 
@@ -137,7 +133,7 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis</strong> <span>All Rights Reserved</span>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">TK TPA AL MUTTAQIN UNIT 062.</strong> <span>All Rights Reserved</span>
             </p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
