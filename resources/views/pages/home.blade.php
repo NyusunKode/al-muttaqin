@@ -12,19 +12,20 @@
         <div class="container">
             <div class="row gy-4 d-flex justify-content-between">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur
-                        repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis
-                        eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel
-                        reprehenderit</p>
+                    <h2 data-aos="fade-up">
+                        Selamat Datang di Website TK TPA AL MUTTAQIN UNIT 062
+                    </h2>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Jalan PDAM Km 12 Rt 18 Karang-Joang, Balikpapan Utara
+                    </p>
 
-                    <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
+                    {{-- <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
                         data-aos-delay="200">
                         <input type="text" class="form-control" placeholder="Your ZIP code or City. e.g. New York">
                         <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
+                    </form> --}}
 
-                    <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+                    {{-- <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
 
                         <div class="col-lg-3 col-6">
                             <div class="stats-item text-center w-100 h-100">
@@ -58,7 +59,7 @@
                             </div>
                         </div><!-- End Stats Item -->
 
-                    </div>
+                    </div> --}}
 
                 </div>
 
@@ -79,36 +80,61 @@
             <div class="row gy-4">
 
                 <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-book"></i></div>
                     <div>
-                        <h4 class="title">Lorem Ipsum</h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Mengajarkan Anak-Anak Agar Mampu Membaca Alquran
+                        </h4>
+                        <p class="description">
+                            Fungsi dan tujuan yang pertama dari dibentuknya Taman Pendidikan Alquran adalah untuk
+                            mengajarkan anak-anak agar mampu membaca Alquran. Membaca Alquran merupakan salah satu
+                            pembelajaran utama yang akan didapat ketika anak-anak mengenyam pendidikan di Taman Pendidikan
+                            Alquran.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <!-- End Service Item -->
 
                 <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-pen"></i></div>
                     <div>
-                        <h4 class="title">Dolor Sitema</h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat tarad limino ata</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Mengajarkan Anak-Anak Agar Mampu Menulis Alquran
+                        </h4>
+                        <p class="description">
+                            Selain bertujuan untuk mengajarkan anak-anak mampu membaca Alquran, Taman Pendidikan Alquran
+                            juga bertujuan agar anak-anak mampu menulis Alquran. Tentunya yang dimaksud disini bukanlah
+                            menuliskan mushaf Alquran secara keseluruhan, akan tetapi para santri siswa siswi yang mengenyam
+                            pendidikan di Taman Pendidikan Alquran dapat dan memiliki kemampuan untuk menulis huruf hijaiyah
+                            arab.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-brain"></i></div>
                     <div>
-                        <h4 class="title">Sed ut perspiciatis</h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Melatih Kemampuan Menghafal Alquran
+                        </h4>
+                        <p class="description">
+                            Tujuan Taman Pendidikan Alquran selanjunya adalah untuk melatih kemampuan anak-anak dalam
+                            menghafal Alquran. Dalam hal kategori menghafal Alquran, lazimnya pelajaran hafalan yang
+                            diberikan di Taman Pendidikan Alquran adalah hafalan surat surat pada juz amma, doa sehari hari
+                            serta bacaan sholat.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div><!-- End Service Item -->
 
@@ -132,35 +158,43 @@
                 </div>
 
                 <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
-                    <h3>About Us</h3>
+                    <h3>Tentang TPA</h3>
                     <p>
-                        Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas
-                        deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam
-                        ut eius incidunt reiciendis veritatis asperiores placeat.
+                        Taman Pendidikan Al-Qur'an (disingkat TPA atau TPQ) merupakan lembaga atau kelompok masyarakat yang
+                        menyelenggarakan pendidikan nonformal jenis keagamaan Islam yang bertujuan untuk memberikan
+                        pengajaran membaca Al-Qur'an sejak usia dini, serta memahami dasar-dasar dinul Islam pada anak usia
+                        taman kanak-kanak, sekolah dasar dan atau madrasah ibtidaiyah (SD/MI) atau bahkan yang lebih tinggi.
                     </p>
                     <ul>
                         <li>
                             <i class="bi bi-diagram-3"></i>
                             <div>
-                                <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade
+                                <h5>TPQ Al-Muttaqin terdiri dari 8 orang Ustadzah</h5>
+                                <p>
+                                    Dengan dibekali Ustadzah yang berpendidikan dan bersertifikat maka pengajaran terhadap
+                                    anak-anak pasti akan berkualitas.
                                 </p>
                             </div>
                         </li>
                         <li>
                             <i class="bi bi-fullscreen-exit"></i>
                             <div>
-                                <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna
-                                    pasata redi</p>
+                                <h5>Pembelajaran Efektif</h5>
+                                <p>
+                                    TPA AL-MUTTAQIN memang terkenal dengan pembelajaran yang efektif, mengikuti zaman dan
+                                    cenderung teliti yang sudah di terapkan kepada santri selama sejak berdirinya Taman
+                                    tersebut.
+                                </p>
                             </div>
                         </li>
                         <li>
                             <i class="bi bi-broadcast"></i>
                             <div>
-                                <h5>Voluptatem et qui exercitationem</h5>
-                                <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime
-                                    veniam</p>
+                                <h5>Pendaftaran Online</h5>
+                                <p>
+                                    Mengikuti zaman, TPA AL-MUTTAQIN mempunyai inovasi dengan melakukan pendaftaran secara
+                                    online untuk calon santri baru.
+                                </p>
                             </div>
                         </li>
                     </ul>
@@ -177,9 +211,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <span>Our Services<br></span>
-            <h2>Our ServiceS</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <span>Media dan Informasi<br></span>
+            <h2>Media dan Informasi</h2>
         </div><!-- End Section Title -->
 
         <div class="container">
