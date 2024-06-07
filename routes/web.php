@@ -23,7 +23,10 @@ Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->midd
 
 // Halaman Admin
 Route::get('/dashboard', [PagesController::class, 'dashboardPage'])->name('dashboard')->middleware('auth');
+Route::get('/registrasi', [PagesController::class, 'registrasiPage'])->name('registrasi')->middleware('auth');
+Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('informasi')->middleware('auth');
 
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);
 

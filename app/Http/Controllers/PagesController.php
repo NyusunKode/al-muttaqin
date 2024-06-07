@@ -25,4 +25,18 @@ class PagesController extends Controller
 
         return view('pages.admin.dashboard', compact('user', 'roles'));
     }
+    public function registrasiPage() {
+        
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        return view('pages.admin.registrasi', compact('user', 'roles'));
+    }
+    public function informasiPage() {
+        
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        return view('pages.admin.informasi', compact('user', 'roles'));
+    }
 }
