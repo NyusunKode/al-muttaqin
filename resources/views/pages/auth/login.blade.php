@@ -4,11 +4,28 @@
 @endsection
 
 @section('container')
-    <form action="/login" method="POST">
+    <form class="mt-4" action="/login" method="POST">
         @csrf
-        <input type="text" name="username" required>
-        <input type="password" name="password" required>
-        <button type="submit">Login</button>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="text-dark" for="username">Username</label>
+                    <input class="form-control" id="username" type="text" name="username" placeholder="enter your username">
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="text-dark" for="password">Password</label>
+                    <input class="form-control" id="password" type="password" name="password" placeholder="enter your password">
+                </div>
+            </div>
+            <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-block btn-dark">Sign In</button>
+            </div>
+            {{-- <div class="col-lg-12 text-center mt-5">
+                Don't have an account? <a href="#" class="text-danger">Sign Up</a>
+            </div> --}}
+        </div>
     </form>
 @endsection
 

@@ -21,5 +21,9 @@ Route::get('/', [PagesController::class, 'homePage'])->name('homepage')->middlew
 // Halaman Authentikasi
 Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->middleware('guest');
 
+// Halaman Admin
+Route::get('/dashboard', [PagesController::class, 'dashboardPage'])->name('dashboard')->middleware('auth');
+
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
+

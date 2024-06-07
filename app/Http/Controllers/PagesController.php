@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -12,5 +13,16 @@ class PagesController extends Controller
 
     public function loginPage() {
         return view('pages.auth.login');
+    }
+
+    public function dashboardPage() {
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        return view('pages.admin.dashboard', compact('user', 'roles'));
     }
 }
