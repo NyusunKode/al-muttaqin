@@ -3,64 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registrasi;
-use App\Http\Requests\StoreRegistrasiRequest;
-use App\Http\Requests\UpdateRegistrasiRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class RegistrasiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+    public function register(Request $request) {
+        $request->validate([
+            'nama_ortu' => 'required|string',
+            'nama_anak' => 'required|string',
+            'nomor_wa' => 'required|numeric'
+        ]);
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreRegistrasiRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateRegistrasiRequest $request, Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Registrasi $registrasi)
-    {
-        //
+        try {
+            Registrasi::create([
+                'nama_ortu' => $request->nama_ortu,
+                'nama_anak' => $request->nama_anak,
+                'nomor_wa' => $request->nomor_wa
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error creating template:', ['error' => $e->getMessage()]);
+            return redirect()->back()->with('ERROR', 'Gagal melakukan pendaftaran.');
+        }
+        return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil diterima.');
     }
 }

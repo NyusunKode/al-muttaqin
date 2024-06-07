@@ -29,6 +29,7 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+
     @yield('style')
 </head>
 
@@ -133,7 +134,8 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">TK TPA AL MUTTAQIN UNIT 062.</strong> <span>All Rights Reserved</span>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">TK TPA AL MUTTAQIN UNIT 062.</strong> <span>All
+                    Rights Reserved</span>
             </p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -164,6 +166,7 @@
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
+    @yield('script')
 </body>
 
 </html>

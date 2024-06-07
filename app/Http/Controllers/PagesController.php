@@ -11,6 +11,10 @@ class PagesController extends Controller
         return view('pages.home');
     }
 
+    public function registrationPage() {
+        return view('pages.registration');
+    }
+
     public function loginPage() {
         return view('pages.auth.login');
     }
@@ -26,14 +30,14 @@ class PagesController extends Controller
         return view('pages.admin.dashboard', compact('user', 'roles'));
     }
     public function registrasiPage() {
-        
+
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
 
         return view('pages.admin.registrasi', compact('user', 'roles'));
     }
     public function informasiPage() {
-        
+
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
 
