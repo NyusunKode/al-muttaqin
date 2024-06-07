@@ -324,8 +324,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table no-wrap v-middle mb-0">
+                        <div class=" table-responsive">
+                            <table class="table no-wrap v-middle mb-0 w-100 datatable">
                                 <thead>
                                     <tr class="border-0">
                                         <th class="border-0 font-14 font-weight-medium text-muted">Team Lead
