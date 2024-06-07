@@ -306,7 +306,7 @@
                             2024/2025. Unggul dan Islami dalam Mewujudkan Masyarakat yang Berkeadaban "|Membaca
                             Alquran|Menulis Alquran|Menghafal Alquran|Mengamalkan Kandungan Alquran|"
                         </p>
-                        <a class="btn btn-primary" href="#">Daftar</a>
+                        <a class="btn btn-primary" href="/registration">Daftar</a>
                     </div>
                 </div>
             </div>

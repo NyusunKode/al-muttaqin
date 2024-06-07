@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\RegistrasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Halaman Profile
-Route::get('/', [PagesController::class, 'homePage'])->name('homepage')->middleware('guest');
+Route::get('/', [PagesController::class, 'homePage'])->name('homepage');
+Route::get('/registration', [PagesController::class, 'registrationPage'])->name('registration');
 
 // Halaman Authentikasi
 Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->middleware('guest');
@@ -29,4 +31,8 @@ Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('infor
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
+
+// Controller Umum
+Route::post('/register', [RegistrasiController::class, 'register']);
+
 
