@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_ortu');
             $table->string('nama_anak');
             $table->string('nomor_wa');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
