@@ -37,161 +37,46 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <h4 class="card-title mx-3">Data</h4>
+                            <h4 class="card-title mx-3">Data Calon Santri</h4>
                         </div>
                         <div class="table-responsive">
                             <table id="zero_config" class="table table-striped table-bordered no-wrap datatable w-100">
                                 <thead>
                                     <tr>
-                                        <th>Status</th>
-                                        <th>Title</th>
-                                        <th>ID</th>
-                                        <th>Product</th>
-                                        <th>Created by</th>
-                                        <th>Date</th>
-                                        <th>Agent</th>
+                                        <th class="text-center">ID</th>
+                                        <th class="text-center">Nama Orang Tua</th>
+                                        <th class="text-center">Nama Calon Santri</th>
+                                        <th class="text-center">Nomor Whatsapp</th>
+                                        <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><span class="badge badge-light-warning">In Progress</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Elegant
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">276377</a></td>
-                                        <td>Elegant Admin</td>
-                                        <td>Eric Pratt</td>
-                                        <td>2018/05/01</td>
-                                        <td>Fazz</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-danger">Closed</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">AdminX
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1234251</a></td>
-                                        <td>AdminX Admin</td>
-                                        <td>Nirav Joshi</td>
-                                        <td>2018/05/11</td>
-                                        <td>Steve</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-success">Opened</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Admin-Pro
-                                                Theme Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1020345</a></td>
-                                        <td>Admin-Pro</td>
-                                        <td>Vishal Bhatt</td>
-                                        <td>2018/04/01</td>
-                                        <td>John</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-warning">In Progress</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Elegant
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">7810203</a></td>
-                                        <td>Elegant Admin</td>
-                                        <td>Eric Pratt</td>
-                                        <td>2018/01/01</td>
-                                        <td>Fazz</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-warning">In Progress</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">AdminX
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">2103450</a></td>
-                                        <td>AdminX Admin</td>
-                                        <td>Nirav Joshi</td>
-                                        <td>2018/05/01</td>
-                                        <td>John</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-warning">In Progress</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Admin-Pro
-                                                Theme Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">2140530</a></td>
-                                        <td>Admin-Pro</td>
-                                        <td>Vishal Bhatt</td>
-                                        <td>2018/07/01</td>
-                                        <td>Steve</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-success">Opened</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Elegant
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">4500123</a></td>
-                                        <td>Elegant Admin</td>
-                                        <td>Eric Pratt</td>
-                                        <td>2018/05/10</td>
-                                        <td>Fazz</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-danger">Closed</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Elegant
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1230450</a></td>
-                                        <td>Elegant Admin</td>
-                                        <td>Eric Pratt</td>
-                                        <td>2018/05/14</td>
-                                        <td>John</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-danger">Closed</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">AdminX
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1240503</a></td>
-                                        <td>AdminX Admin</td>
-                                        <td>Nirav Joshi</td>
-                                        <td>2018/02/01</td>
-                                        <td>Steve</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-success">Opened</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Admin-Pro
-                                                Theme Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1250304</a></td>
-                                        <td>Admin-Pro</td>
-                                        <td>Vishal Bhatt</td>
-                                        <td>2018/05/21</td>
-                                        <td>Fazz</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-success">Opened</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Elegant
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1470250</a></td>
-                                        <td>Elegant Admin</td>
-                                        <td>Eric Pratt</td>
-                                        <td>2018/05/11</td>
-                                        <td>John</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-danger">Closed</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">Admin-Pro
-                                                Theme Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1450023</a></td>
-                                        <td>Admin-Pro</td>
-                                        <td>Vishal Bhatt</td>
-                                        <td>2018/05/13</td>
-                                        <td>Steve</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="badge badge-light-warning">In Progress</span></td>
-                                        <td><a href="javascript:void(0)" class="font-weight-medium link">AdminX
-                                                Theme
-                                                Side Menu Open OnClick</a></td>
-                                        <td><a href="javascript:void(0)" class="font-bold link">1420530</a></td>
-                                        <td>AdminX Admin</td>
-                                        <td>Nirav Joshi</td>
-                                        <td>2018/10/01</td>
-                                        <td>Fazz</td>
-                                    </tr>
+                                    @foreach ($registration as $registration)
+                                        <tr>
+                                            <td class="text-center">{{ $registration->id }}</td>
+                                            <td class="text-center">{{ $registration->nama_ortu }}</td>
+                                            <td class="text-center">{{ $registration->nama_anak }}</td>
+                                            <td class="text-center">{{ $registration->nomor_wa }}</td>
+                                            <td class="text-center">
+                                                <div class="dropdown sub-dropdown">
+                                                    <button class="btn btn-link text-muted dropdown-toggle" type="button"
+                                                        id="dd1" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i data-feather="chevron-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="text-success" data-feather="check"></i> Konfirmasi
+                                                        </a>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="text-danger" data-feather="x"></i> Tolak
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
