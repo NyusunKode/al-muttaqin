@@ -65,13 +65,10 @@
                                                         <i data-feather="chevron-down"></i>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                                        <form action="/accept-registration/{{ $registration->id }}" method="POST">
-                                                            @csrf
-                                                            <button type="submit" class="dropdown-item">
-                                                                <i class="text-success" data-feather="check"></i> Konfirmasi
-                                                            </button>
-                                                        </form>
-                                                        
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="text-success" data-feather="check"></i> Konfirmasi
+                                                        </a>
+
                                                         <a class="dropdown-item" href="#">
                                                             <i class="text-danger" data-feather="x"></i> Tolak
                                                         </a>

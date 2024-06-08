@@ -36,18 +36,21 @@ class RegistrasiController extends Controller
         $registration = Registrasi::findOrFail($id);
 
         try {
-            if (substr($registration->nomor_wa, 0, 2) === '08') {
-                $registration->nomor_wa = '62' . substr($registration->nomor_wa, 1);
-            } elseif (substr($registration->nomor_wa, 0, 1) === '0') {
-                $registration->nomor_wa = '62' . substr($registration->nomor_wa, 1);
+            $formatted_nomor_wa = $registration->nomor_wa;
+
+            if (substr($formatted_nomor_wa, 0, 2) === '08') {
+                $formatted_nomor_wa = '62' . substr($formatted_nomor_wa, 1);
+            } elseif (substr($formatted_nomor_wa, 0, 1) === '0') {
+                $formatted_nomor_wa = '62' . substr($formatted_nomor_wa, 1);
             }
+
             $registration->status = array_search('diterima', Registrasi::getStatusOptions());
             $registration->save();
 
             $client = new Client();
             $response = $client->post(env('URL_WA_SERVER') . '/john/messages/send', [
                 'json' => [
-                    'jid' => $registration->nomor_wa . '@s.whatsapp.net',
+                    'jid' => $formatted_nomor_wa . '@s.whatsapp.net',
                     'type' => 'number',
                     'message' => [
                         'image' => ['url' => 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1644309716/hogdkkpwy5mlftetyo9l.jpg'],
