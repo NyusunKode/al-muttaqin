@@ -12,19 +12,20 @@
         <div class="container">
             <div class="row gy-4 d-flex justify-content-between">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur
-                        repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis
-                        eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel
-                        reprehenderit</p>
+                    <h2 data-aos="fade-up">
+                        Selamat Datang di Website TK TPA AL MUTTAQIN UNIT 062
+                    </h2>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Jalan PDAM Km 12 Rt 18 Karang-Joang, Balikpapan Utara
+                    </p>
 
-                    <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
+                    {{-- <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
                         data-aos-delay="200">
                         <input type="text" class="form-control" placeholder="Your ZIP code or City. e.g. New York">
                         <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
+                    </form> --}}
 
-                    <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+                    {{-- <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
 
                         <div class="col-lg-3 col-6">
                             <div class="stats-item text-center w-100 h-100">
@@ -58,7 +59,7 @@
                             </div>
                         </div><!-- End Stats Item -->
 
-                    </div>
+                    </div> --}}
 
                 </div>
 
@@ -79,36 +80,61 @@
             <div class="row gy-4">
 
                 <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-book"></i></div>
                     <div>
-                        <h4 class="title">Lorem Ipsum</h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi sint occaecati cupiditate non provident</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Mengajarkan Anak-Anak Agar Mampu Membaca Alquran
+                        </h4>
+                        <p class="description">
+                            Fungsi dan tujuan yang pertama dari dibentuknya Taman Pendidikan Alquran adalah untuk
+                            mengajarkan anak-anak agar mampu membaca Alquran. Membaca Alquran merupakan salah satu
+                            pembelajaran utama yang akan didapat ketika anak-anak mengenyam pendidikan di Taman Pendidikan
+                            Alquran.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <!-- End Service Item -->
 
                 <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-pen"></i></div>
                     <div>
-                        <h4 class="title">Dolor Sitema</h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat tarad limino ata</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Mengajarkan Anak-Anak Agar Mampu Menulis Alquran
+                        </h4>
+                        <p class="description">
+                            Selain bertujuan untuk mengajarkan anak-anak mampu membaca Alquran, Taman Pendidikan Alquran
+                            juga bertujuan agar anak-anak mampu menulis Alquran. Tentunya yang dimaksud disini bukanlah
+                            menuliskan mushaf Alquran secara keseluruhan, akan tetapi para santri siswa siswi yang mengenyam
+                            pendidikan di Taman Pendidikan Alquran dapat dan memiliki kemampuan untuk menulis huruf hijaiyah
+                            arab.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon flex-shrink-0"><i class="fa-solid fa-brain"></i></div>
                     <div>
-                        <h4 class="title">Sed ut perspiciatis</h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur</p>
-                        <a href="#" class="readmore stretched-link"><span>Learn More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h4 class="title">
+                            Melatih Kemampuan Menghafal Alquran
+                        </h4>
+                        <p class="description">
+                            Tujuan Taman Pendidikan Alquran selanjunya adalah untuk melatih kemampuan anak-anak dalam
+                            menghafal Alquran. Dalam hal kategori menghafal Alquran, lazimnya pelajaran hafalan yang
+                            diberikan di Taman Pendidikan Alquran adalah hafalan surat surat pada juz amma, doa sehari hari
+                            serta bacaan sholat.
+                        </p>
+                        <a href="#" class="readmore stretched-link">
+                            <span>Lihat selengkapnya</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div><!-- End Service Item -->
 
@@ -132,35 +158,43 @@
                 </div>
 
                 <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
-                    <h3>About Us</h3>
+                    <h3>Tentang TPA</h3>
                     <p>
-                        Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas
-                        deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam
-                        ut eius incidunt reiciendis veritatis asperiores placeat.
+                        Taman Pendidikan Al-Qur'an (disingkat TPA atau TPQ) merupakan lembaga atau kelompok masyarakat yang
+                        menyelenggarakan pendidikan nonformal jenis keagamaan Islam yang bertujuan untuk memberikan
+                        pengajaran membaca Al-Qur'an sejak usia dini, serta memahami dasar-dasar dinul Islam pada anak usia
+                        taman kanak-kanak, sekolah dasar dan atau madrasah ibtidaiyah (SD/MI) atau bahkan yang lebih tinggi.
                     </p>
                     <ul>
                         <li>
                             <i class="bi bi-diagram-3"></i>
                             <div>
-                                <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade
+                                <h5>TPQ Al-Muttaqin terdiri dari 8 orang Ustadzah</h5>
+                                <p>
+                                    Dengan dibekali Ustadzah yang berpendidikan dan bersertifikat maka pengajaran terhadap
+                                    anak-anak pasti akan berkualitas.
                                 </p>
                             </div>
                         </li>
                         <li>
                             <i class="bi bi-fullscreen-exit"></i>
                             <div>
-                                <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna
-                                    pasata redi</p>
+                                <h5>Pembelajaran Efektif</h5>
+                                <p>
+                                    TPA AL-MUTTAQIN memang terkenal dengan pembelajaran yang efektif, mengikuti zaman dan
+                                    cenderung teliti yang sudah di terapkan kepada santri selama sejak berdirinya Taman
+                                    tersebut.
+                                </p>
                             </div>
                         </li>
                         <li>
                             <i class="bi bi-broadcast"></i>
                             <div>
-                                <h5>Voluptatem et qui exercitationem</h5>
-                                <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime
-                                    veniam</p>
+                                <h5>Pendaftaran Online</h5>
+                                <p>
+                                    Mengikuti zaman, TPA AL-MUTTAQIN mempunyai inovasi dengan melakukan pendaftaran secara
+                                    online untuk calon santri baru.
+                                </p>
                             </div>
                         </li>
                     </ul>
@@ -177,9 +211,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <span>Our Services<br></span>
-            <h2>Our ServiceS</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <span>Media dan Informasi<br></span>
+            <h2>Media dan Informasi</h2>
         </div><!-- End Section Title -->
 
         <div class="container">
@@ -267,11 +300,13 @@
             <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="col-xl-10">
                     <div class="text-center">
-                        <h3>Call To Action</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt mollit anim id est laborum.</p>
-                        <a class="cta-btn" href="#">Call To Action</a>
+                        <h3>Daftarkan anak anda sekarang juga</h3>
+                        <p>
+                            TK TPA AL-MUTTAQIN UNIT 062 BALIKPAPAN UTARA menerima pendaftaran santri baru tahun ajaran
+                            2024/2025. Unggul dan Islami dalam Mewujudkan Masyarakat yang Berkeadaban "|Membaca
+                            Alquran|Menulis Alquran|Menghafal Alquran|Mengamalkan Kandungan Alquran|"
+                        </p>
+                        <a class="btn btn-primary" href="/registration">Daftar</a>
                     </div>
                 </div>
             </div>
@@ -281,14 +316,6 @@
 
     <!-- Features Section -->
     <section id="features" class="features section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <span>Features</span>
-            <h2>Features</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title -->
-
         <div class="container">
 
             <div class="row gy-4 align-items-center features-item">
@@ -296,18 +323,24 @@
                     <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                    <h3>Tenaga Pendidik</h3>
                     <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
+                        adalah istilah dalam bahasa Indonesia yang merujuk kepada seorang guru atau pengajar agama Islam
+                        yang bertugas mengajar ilmu agama Islam kepada murid-muridnya, biasanya dalam konteks pengajaran
+                        Al-Qur'an, hadis, tafsir, dan ajaran-ajaran agama Islam lainnya.
                     </p>
                     <ul>
-                        <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</span></li>
-                        <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate
-                                velit.</span></li>
-                        <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span>
+                        <li>
+                            <i class="bi bi-check"></i>
+                            <span>
+                                8 orang ustadzah yang bersertifikat dan berpengalaman.
+                            </span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check"></i>
+                            <span>
+                                Ustadzah dibekali ilmu dan latihan pada lembaga BKPRMI di setiap bulannya.
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -319,18 +352,12 @@
                     <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Corporis temporibus maiores provident</h3>
+                    <h3>Sarana dan Prasarana</h3>
                     <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
+                        Ruang Kelas Menyenangkan, Sarana Ibadah Yang Terhubung dengan Masjid AL-MUTTAQIN
                     </p>
                     <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum
+                        Sebagai upaya meningkatkan kualitas, dan mutu pembelajaran, di TK TPA AL-MUTTAQIN telah memiliki fasilitas pendidikan yang dapat mendukung kegiatan belajar dan mengajar, baik akademik maupun non akademik.
                     </p>
                 </div>
             </div><!-- Features Item -->
@@ -340,9 +367,10 @@
                     <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7" data-aos="fade-up">
-                    <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-                    <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe
-                        odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                    <h3>Struktur Organisasi</h3>
+                    <p>
+                        Struktur Pengurus pada Taman Pendidikan Al-Quran Al-Muttaqin unit 062
+                    </p>
                     <ul>
                         <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat.</span></li>
@@ -353,28 +381,6 @@
                     </ul>
                 </div>
             </div><!-- Features Item -->
-
-            <div class="row gy-4 align-items-center features-item">
-                <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-                    <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-                    <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-                    <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
-                    </p>
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-                </div>
-            </div><!-- Features Item -->
-
         </div>
 
     </section><!-- /Features Section -->
@@ -384,9 +390,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <span>Pricing</span>
-            <h2>Pricing</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <span>Sarana dan Prasarana</span>
+            <h2>Sarana dan Prasarana</h2>
         </div><!-- End Section Title -->
 
         <div class="container">
@@ -394,51 +399,42 @@
             <div class="row gy-4">
 
                 <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="pricing-item">
-                        <h3>Free Plan</h3>
-                        <h4><sup>$</sup>0<span> / month</span></h4>
-                        <ul>
-                            <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                            <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span>
-                            </li>
-                            <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis
-                                    hendrerit</span></li>
-                        </ul>
-                        <a href="#" class="buy-btn">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-
-                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="pricing-item featured">
-                        <h3>Business Plan</h3>
-                        <h4><sup>$</sup>29<span> / month</span></h4>
+                        <h3>1 Ruangan Kelas Mengaji</h3>
                         <ul>
-                            <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                            <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                            <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                            <li><i class="bi bi-check"></i> <span>Ruangan kelas yang menarik</span></li>
+                            <li><i class="bi bi-check"></i> <span>Dilengkapi meja yang banyak</span></li>
+                            <li><i class="bi bi-check"></i> <span>Memastikan ruangan mengaji bersih dan
+                                tidak kotor</span></li>
                         </ul>
-                        <a href="#" class="buy-btn">Buy Now</a>
                     </div>
                 </div><!-- End Pricing Item -->
 
-                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="pricing-item">
-                        <h3>Developer Plan</h3>
-                        <h4><sup>$</sup>49<span> / month</span></h4>
+                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pricing-item featured">
+                        <h3>Masjid Al-Muttaqin</h3>
                         <ul>
-                            <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                            <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                            <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                            <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                            <li><i class="bi bi-check"></i> <span>Beberapa kelas atau juz al-quran berada
+                                di area masjid</span></li>
+                            <li><i class="bi bi-check"></i> <span>Melakukan kegiatan praktek shalat dan
+                                kegiatan keislama lainnya di area masjid</span></li>
                         </ul>
-                        <a href="#" class="buy-btn">Buy Now</a>
                     </div>
                 </div><!-- End Pricing Item -->
+
+                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pricing-item featured">
+                        <h3>1 Ruangan Kamar Mandi</h3>
+                        <ul>
+                            <li><i class="bi bi-check"></i> <span>Kamar Mandi yang bersih</span></li>
+                            <li><i class="bi bi-check"></i> <span>Memastikan kamar mandi terpisah
+                                dengan kamar mandi masjid</span></li>
+                            <li><i class="bi bi-check"></i> <span>Guru memastikan setiap sebulan sekali
+                                membersihkan lingkungan area TPA</span></li>
+                        </ul>
+                    </div>
+                </div><!-- End Pricing Item -->
+
 
             </div>
 
@@ -460,8 +456,8 @@
                     <div class="swiper-slide">
                         <div class="testimonial-item">
                             <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
+                            <h3>Suparti</h3>
+                            <h4>Guru</h4>
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -570,22 +566,17 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <span>Frequently Asked Questions</span>
-            <h2>Frequently Asked Questions</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <span>Tanya Kami</span>
+            <h2>Tanya Kami</h2>
         </div><!-- End Section Title -->
 
         <div class="container">
-
             <div class="row justify-content-center">
-
                 <div class="col-lg-10">
-
                     <div class="faq-container">
-
-                        <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                             <i class="faq-icon bi bi-question-circle"></i>
-                            <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                            <h3>Bagaimana cara mendaftarkan calon santri secara Online?</h3>
                             <div class="faq-content">
                                 <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
                                     laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
@@ -596,7 +587,7 @@
 
                         <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                             <i class="faq-icon bi bi-question-circle"></i>
-                            <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                            <h3>Syarat apa saja yang di perlukan untuk mendaftarkan anak saya ke TK TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
                                 <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
                                     interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
@@ -608,7 +599,7 @@
 
                         <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                             <i class="faq-icon bi bi-question-circle"></i>
-                            <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                            <h3>Apa saja yang di pelajari selama menempuh pendidikan di TK TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
                                 <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
                                     Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
@@ -621,7 +612,7 @@
 
                         <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                             <i class="faq-icon bi bi-question-circle"></i>
-                            <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                            <h3>Fasilitas apa saja yang ada di TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
                                 <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
                                     interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
@@ -630,19 +621,6 @@
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
-
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                            <i class="faq-icon bi bi-question-circle"></i>
-                            <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
-                            <div class="faq-content">
-                                <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse
-                                    in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                    suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                </p>
-                            </div>
-                            <i class="faq-toggle bi bi-chevron-right"></i>
-                        </div><!-- End Faq item-->
-
                     </div>
 
                 </div>
