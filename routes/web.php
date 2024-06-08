@@ -32,6 +32,7 @@ Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('infor
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRegsitration']);
 
 // Controller Umum
 Route::post('/register', [RegistrasiController::class, 'register']);
