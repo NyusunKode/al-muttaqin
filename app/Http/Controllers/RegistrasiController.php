@@ -13,7 +13,6 @@ class RegistrasiController extends Controller
             'nama_ortu' => 'required|string',
             'nama_anak' => 'required|string',
             'nomor_wa' => 'required|numeric',
-            'status' => 'required|string',
         ]);
 
         try {
@@ -24,7 +23,7 @@ class RegistrasiController extends Controller
                 'status' => array_search('terdaftar', Registrasi::getStatusOptions())
             ]);
         } catch (\Exception $e) {
-            Log::error('Error creating template:', ['error' => $e->getMessage()]);
+            Log::error('Error register:', ['error' => $e->getMessage()]);
             return redirect()->back()->with('ERROR', 'Gagal melakukan pendaftaran.');
         }
         return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil diterima.');
