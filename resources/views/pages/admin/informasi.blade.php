@@ -9,7 +9,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Inforamsi</h4>
+                <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Informasi</h4>
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0 p-0">
@@ -23,7 +23,7 @@
                     <button type="button" data-toggle="modal" data-target="#bs-example-modal-lg" class="btn btn-primary"
                         href="">Tambah</button>
                 </div>
-                @include('pages.admin.modals.edit-modal')
+                @include('pages.admin.modals.add-modal')
             </div>
         </div>
     </div>
