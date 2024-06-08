@@ -232,7 +232,11 @@
                                         class="text-dark">{{ $user->name }}</span> <i data-feather="chevron-down"
                                         class="svg-icon"></i></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                            <div class="dropdown-menu w-100">
+                                <a href="#" class="dropdown-item">
+                                    <i data-feather="user" class="svg-icon mr-2 ml-1"></i>
+                                    My Profile
+                                </a>
                                 <form action="/logout" method="POST">
                                     @csrf
                                     <button class="dropdown-item" type="submit"><i data-feather="power"
