@@ -46,15 +46,15 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#" class="active">Beranda<br></a></li>
+                    <li><a href="/" class="active">Beranda<br></a></li>
                     <li class="dropdown">
-                        <a href="#"><span>Tentang TPA</span>
+                        <a href="#"><span>Tentang Kami</span>
                             <i class="bi bi-chevron-down toggle-dropdown"></i>
                         </a>
 
                         <ul>
-                            <li><a href="#">Dropdown 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                            <li><a href="/visi">Visi dan Misi</a></li>
+                            {{-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
                                         class="bi bi-chevron-down toggle-dropdown"></i></a>
                                 <ul>
                                     <li><a href="#">Deep Dropdown 1</a></li>
@@ -63,10 +63,10 @@
                                     <li><a href="#">Deep Dropdown 4</a></li>
                                     <li><a href="#">Deep Dropdown 5</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="#">Dropdown 2</a></li>
-                            <li><a href="#">Dropdown 3</a></li>
-                            <li><a href="#">Dropdown 4</a></li>
+                            </li> --}}
+                            <li><a href="#">Sejarah Singkat</a></li>
+                            <li><a href="#">Tenaga Pendidik</a></li>
+
                         </ul>
                     </li>
                     <li><a href="#">Media dan Informasi</a></li>
@@ -75,7 +75,6 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-
             <a class="btn-getstarted" href="/login">Login</a>
 
         </div>
