@@ -12,6 +12,10 @@ class PagesController extends Controller
         return view('pages.home');
     }
 
+    public function visiPage() {
+        return view('pages.visi');
+    }
+
     public function registrationPage() {
         return view('pages.registration');
     }
