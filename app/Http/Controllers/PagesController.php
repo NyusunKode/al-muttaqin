@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\informasi;
 use App\Models\Registrasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,7 +56,8 @@ class PagesController extends Controller
 
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
+        $informasi = informasi::all();
 
-        return view('pages.admin.informasi', compact('user', 'roles'));
+        return view('pages.admin.informasi', compact('user', 'roles', 'informasi'));
     }
 }

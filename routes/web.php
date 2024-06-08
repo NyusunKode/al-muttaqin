@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\RegistrasiController;
 use Illuminate\Support\Facades\Route;
@@ -30,11 +31,11 @@ Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->midd
 Route::get('/dashboard', [PagesController::class, 'dashboardPage'])->name('dashboard')->middleware('auth');
 Route::get('/registrasi', [PagesController::class, 'registrasiPage'])->name('registrasi')->middleware('auth');
 Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('informasi')->middleware('auth');
+Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name('insertInformasi')->middleware('auth');
 
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
-Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRegsitration']);
 
 // Controller Umum
 Route::post('/register', [RegistrasiController::class, 'register']);
