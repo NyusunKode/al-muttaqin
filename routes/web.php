@@ -36,6 +36,7 @@ Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name(
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRegistration']);
 
 // Controller Umum
 Route::post('/register', [RegistrasiController::class, 'register']);

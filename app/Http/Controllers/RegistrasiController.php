@@ -28,10 +28,10 @@ class RegistrasiController extends Controller
             Log::error('Error register:', ['error' => $e->getMessage()]);
             return redirect()->back()->with('ERROR', 'Gagal melakukan pendaftaran.');
         }
-        return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil diterima.');
+        return redirect()->back()->with('SUCCESS', 'Data anda berhasil didaftarkan.');
     }
 
-    public function acceptRegsitration($id)
+    public function acceptRegistration($id)
     {
         $registration = Registrasi::findOrFail($id);
 
@@ -65,7 +65,7 @@ class RegistrasiController extends Controller
             }
         } catch (\Exception $e) {
             Log::error('Error register:', ['error' => $e->getMessage()]);
-            return redirect()->back()->with('ERROR', 'Gagal melakukan pendaftaran.');
+            return redirect()->back()->with('ERROR', 'Gagal melakukan konfirmasi.');
         }
 
         return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil diterima.');

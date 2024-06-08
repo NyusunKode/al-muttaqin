@@ -20,12 +20,12 @@ class InformasiController extends Controller
 
         try {
             $filePaththumbnail = $request->file('thumbnail')->store('thumbnails', 'public');
-            
+
             $directory = public_path('images/thumbnail');
             if (!File::isDirectory($directory)) {
                 File::makeDirectory($directory, 0777, true, true);
             }
-    
+
             informasi::create([
                 'judul'=>$request['judul'],
                 'thumbnail'=>$filePaththumbnail,
@@ -35,6 +35,6 @@ class InformasiController extends Controller
             return redirect('/informasi')->with('ERROR', 'Gagal membuat data');
         }
 
-        return redirect('/informasi')->with('SUCCESS', 'Layanan berhasil ditambahkan.');
+        return redirect('/informasi')->with('SUCCESS', 'Data berhasil ditambahkan.');
     }
 }

@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class PagesController extends Controller
 {
     public function homePage() {
-        return view('pages.home');
+        $informasi = informasi::query()->get();
+
+        return view('pages.home', compact('informasi'));
     }
 
     public function visiPage() {
@@ -40,6 +42,8 @@ class PagesController extends Controller
 
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
+
+
 
         return view('pages.admin.dashboard', compact('user', 'roles'));
     }
