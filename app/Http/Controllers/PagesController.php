@@ -16,6 +16,14 @@ class PagesController extends Controller
         return view('pages.visi');
     }
 
+    public function historiPage() {
+        return view('pages.histori');
+    }
+
+    public function teacherPage() {
+        return view('pages.teacher');
+    }
+
     public function registrationPage() {
         return view('pages.registration');
     }
