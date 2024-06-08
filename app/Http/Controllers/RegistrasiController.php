@@ -36,6 +36,11 @@ class RegistrasiController extends Controller
         $registration = Registrasi::findOrFail($id);
 
         try {
+            if (substr($registration->nomor_wa, 0, 2) === '08') {
+                $registration->nomor_wa = '62' . substr($registration->nomor_wa, 1);
+            } elseif (substr($registration->nomor_wa, 0, 1) === '0') {
+                $registration->nomor_wa = '62' . substr($registration->nomor_wa, 1);
+            }
             $registration->status = array_search('diterima', Registrasi::getStatusOptions());
             $registration->save();
 
