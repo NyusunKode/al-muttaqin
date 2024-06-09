@@ -92,4 +92,12 @@ class PagesController extends Controller
 
         return view('pages.admin.informasi', compact('user', 'roles', 'informasi'));
     }
+    
+    public function akunPage() {
+
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        return view('pages.admin.akun', compact('user', 'roles'));
+    }
 }

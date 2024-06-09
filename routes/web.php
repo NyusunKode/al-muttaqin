@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\RegistrasiController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,10 @@ Route::get('/dashboard', [PagesController::class, 'dashboardPage'])->name('dashb
 Route::get('/registrasi', [PagesController::class, 'registrasiPage'])->name('registrasi')->middleware('auth');
 Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('informasi')->middleware('auth');
 Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name('insertInformasi')->middleware('auth');
+Route::put('/informasi/edit/{id}', [InformasiController::class, 'updateData'])->name('editInformasi')->middleware('auth');
+Route::delete('/informasi/delete/{id}', [InformasiController::class, 'destroyData'])->name('destroyInformasi')->middleware('auth');
+Route::get('/akun-whatsapp', [PagesController::class, 'akunPage'])->name('akun')->middleware('auth');
+Route::post('/generate-qr', [SessionController::class, 'generateQr'])->name('generator-qr')->middleware('auth');
 
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);
@@ -43,5 +48,3 @@ Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRe
 
 // Controller Umum
 Route::post('/register', [RegistrasiController::class, 'register']);
-
-
