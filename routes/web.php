@@ -21,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'homePage'])->name('homepage');
 Route::get('/visi', [PagesController::class, 'visiPage'])->name('visi');
 Route::get('/histori', [PagesController::class, 'historiPage'])->name('histori');
-Route::get('teacher', [PagesController::class, 'teacherPage'])->name('teacher');
+Route::get('/teacher', [PagesController::class, 'teacherPage'])->name('teacher');
+Route::get('/information', [PagesController::class, 'informationPage'])->name('information');
+Route::get('/facilities', [PagesController::class, 'facilitiesPage'])->name('facilities');
+Route::get('/contact', [PagesController::class, 'contactPage'])->name('contact');
 Route::get('/registration', [PagesController::class, 'registrationPage'])->name('registration');
 
 // Halaman Authentikasi

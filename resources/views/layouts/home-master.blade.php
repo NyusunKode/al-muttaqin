@@ -57,9 +57,9 @@
                             <li><a href="/teacher" class="nav-link">Tenaga Pendidik</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Media dan Informasi</a></li>
-                    <li><a href="#" class="nav-link">Sarana dan Prasarana</a></li>
-                    <li><a href="#" class="nav-link">Kontak</a></li>
+                    <li><a href="/information" class="nav-link">Media dan Informasi</a></li>
+                    <li><a href="/facilities" class="nav-link">Sarana dan Prasarana</a></li>
+                    <li><a href="/contact" class="nav-link">Kontak</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
