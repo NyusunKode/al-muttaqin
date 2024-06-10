@@ -20,7 +20,7 @@
             </div>
             <div class="col-5 align-self-center">
                 <div class="float-right">
-                    <button type="button" data-toggle="modal" data-target="#bs-example-modal-lg" class="btn btn-primary"
+                    <button type="button" data-toggle="modal" data-target="#modal-tambah" class="btn btn-primary"
                         href="">Tambah</button>
                 </div>
                 @include('pages.admin.modals.add-modal')
@@ -73,18 +73,26 @@
                                                         <i data-feather="chevron-down"></i>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                                        <a class="dropdown-item" href="#">
+                                                        <button type="button" data-toggle="modal"
+                                                            data-target="#modal-edit-{{ $item->id }}"
+                                                            class="dropdown-item" href="#">
                                                             <i class="text-success" data-feather="edit-2"></i> edit
-                                                        </a>
-                                                        <a class="dropdown-item" href="#">
-                                                            <i class="text-danger" data-feather="trash"></i> hapus
-                                                        </a>
+                                                        </button>
+                                                        <form action="{{ url('/informasi/delete/' . $item->id) }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('delete')
+                                                            <button class="dropdown-item" href="#">
+                                                                <i class="text-danger" data-feather="trash"></i> hapus
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
+                                @extends('pages.admin.modals.edit-modal')
                             </table>
                         </div>
                     </div>

@@ -41,14 +41,13 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
-    // public function informationPage()
-    // {
-    //     $user = Auth::user();
-    //     $roles = $user->roles->pluck('name');
-    //     $informasi = informasi::all();
+    public function informationPage()
+    {
+        $user = Auth::user();
+        $informasi = informasi::all();
 
-    //     return view('pages.information', compact('user', 'roles', 'informasi'));
-    // }
+        return view('pages.information', compact('user', 'informasi'));
+    }
 
     public function registrationPage()
     {
@@ -91,5 +90,13 @@ class PagesController extends Controller
         $informasi = informasi::all();
 
         return view('pages.admin.informasi', compact('user', 'roles', 'informasi'));
+    }
+    
+    public function akunPage() {
+
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        return view('pages.admin.akun', compact('user', 'roles'));
     }
 }

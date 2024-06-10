@@ -288,6 +288,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/informasi"
                                 aria-expanded="false"><i data-feather="layers" class="feather-icon"></i><span
                                     class="hide-menu">Informasi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/akun-whatsapp"
+                                aria-expanded="false"><i data-feather="link" class="feather-icon"></i><span
+                                    class="hide-menu">Akun Whatsapp</span></a></li>
 
                     </ul>
                 </nav>
