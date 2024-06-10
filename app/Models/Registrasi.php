@@ -13,24 +13,51 @@ class Registrasi extends Model
     protected $primaryKey = "id";
 
     protected $enumStatus = [
-        'terdaftar',
-        'diterima',
-        'ditolak'
+        'false',
+        'true'
+    ];
+
+    protected $enumJenisKelamin = [
+        'Laki Laki',
+        'Perempuan'
     ];
 
     protected $fillable = [
-        "nama_ortu",
-        "nama_anak",
-        "nomor_wa",
+        "id_user",
+        "nama_lengkap_anak",
+        "nama_panggilan_anak",
+        "nik",
+        "jenis_kelamin",
+        "ttl_anak",
+        "anak_ke",
+        "agama",
+        "pendidikan_anak",
+        "alamat_anak",
+        "ttl_ortu",
+        "pekerjaan_ortu",
+        "pendidikan_ortu",
+        "alamat_ortu",
         "status"
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
 
     public static function getStatusOptions()
     {
         return [
-            'terdaftar',
-            'diterima',
-            'ditolak'
+            'false',
+            'true'
+        ];
+    }
+
+    public static function getJenisKelaminOptions()
+    {
+        return [
+            'Laki Laki',
+            'Perempuan'
         ];
     }
 }

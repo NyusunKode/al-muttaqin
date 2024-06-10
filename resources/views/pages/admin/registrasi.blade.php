@@ -54,9 +54,9 @@
                                     @foreach ($registration as $registration)
                                         <tr>
                                             <td class="text-center">{{ $registration->id }}</td>
-                                            <td class="text-center">{{ $registration->nama_ortu }}</td>
-                                            <td class="text-center">{{ $registration->nama_anak }}</td>
-                                            <td class="text-center">{{ $registration->nomor_wa }}</td>
+                                            <td class="text-center">{{ $registration->user->name }}</td>
+                                            <td class="text-center">{{ $registration->nama_lengkap_anak }}</td>
+                                            <td class="text-center">{{ $registration->user->no_telp }}</td>
                                             <td class="text-center">
                                                 <div class="dropdown sub-dropdown">
                                                     <button class="btn btn-link text-muted dropdown-toggle" type="button"

@@ -61,14 +61,18 @@ class PagesController extends Controller
 
     public function dashboardPage()
     {
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+        $registrasi = Registrasi::where('id_user', $user->id)->first();
+
         if (!Auth::check()) {
             return redirect('/login');
         }
 
-        $user = Auth::user();
-        $roles = $user->roles->pluck('name');
-
-
+        if ($registrasi->status == array_search('false', Registrasi::getStatusOptions())) {
+            Auth::logout();
+            return redirect('/login')->with('ERROR', 'Pendaftaran belum dikonfirmasi oleh Admin.');
+        }
 
         return view('pages.admin.dashboard', compact('user', 'roles'));
     }
@@ -91,8 +95,9 @@ class PagesController extends Controller
 
         return view('pages.admin.informasi', compact('user', 'roles', 'informasi'));
     }
-    
-    public function akunPage() {
+
+    public function akunPage()
+    {
 
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
