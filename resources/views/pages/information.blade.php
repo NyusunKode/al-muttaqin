@@ -8,27 +8,22 @@
     <!-- About Section -->
     <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
         <div class="container position-relative">
-            <h1>Tenaga Pendidik</h1>
+            <h1>Media dan Informasi</h1>
             <p>
-                Selamat datang di TPA Al-Muttaqin, tempat di mana pendidikan agama Islam dan pembentukan karakter mulia bagi
-                anak-anak menjadi prioritas utama kami. TPA Al-Muttaqin berdedikasi untuk menyediakan lingkungan yang aman,
-                mendukung, dan inspiratif bagi anak-anak untuk belajar dan tumbuh dalam iman Islam.
+                Selamat datang di TPA Al-Muttaqin, tempat di mana informasi dan media berkualitas tentang pendidikan agama
+                Islam dan pembentukan karakter mulia bagi anak-anak kami sajikan. TPA Al-Muttaqin berkomitmen menyajikan
+                berita dan informasi terkini seputar dunia pendidikan Islam, serta konten multimedia yang mendukung proses
+                belajar mengajar dengan lebih interaktif dan menarik.
             </p>
-            <nav class="breadcrumbs">
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li class="/visi">Teacher</li>
-                </ol>
-            </nav>
         </div>
     </div><!-- End Page Title -->
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <span>Media dan Informasi<br></span>
-        <h2>Media dan Informasi</h2>
+        <span>Informasi Terkini<br></span>
+        <h2>Informasi Terkini</h2>
     </div><!-- End Section Title -->
 
-    <div class="container">
+    <div class="container mb-8">
 
         <div class="row gy-4">
             @foreach ($informasi as $informasi)

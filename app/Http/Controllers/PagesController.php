@@ -41,14 +41,13 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
-    // public function informationPage()
-    // {
-    //     $user = Auth::user();
-    //     $roles = $user->roles->pluck('name');
-    //     $informasi = informasi::all();
+    public function informationPage()
+    {
+        $user = Auth::user();
+        $informasi = informasi::all();
 
-    //     return view('pages.information', compact('user', 'roles', 'informasi'));
-    // }
+        return view('pages.information', compact('user', 'informasi'));
+    }
 
     public function registrationPage()
     {
