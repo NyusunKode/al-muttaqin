@@ -69,13 +69,18 @@ class PagesController extends Controller
             return redirect('/login');
         }
 
-        if ($registrasi->status == array_search('false', Registrasi::getStatusOptions())) {
-            Auth::logout();
-            return redirect('/login')->with('ERROR', 'Pendaftaran belum dikonfirmasi oleh Admin.');
+        if ($roles->contains('ortu')) {
+            if ($registrasi->status == array_search('false', Registrasi::getStatusOptions())) {
+                Auth::logout();
+                return redirect('/login')->with('ERROR', 'Pendaftaran belum dikonfirmasi oleh Admin.');
+            } else {
+                return view('pages.admin.dashboard', compact('user', 'roles'));
+            }
+        } else {
+            return view('pages.admin.dashboard', compact('user', 'roles'));
         }
-
-        return view('pages.admin.dashboard', compact('user', 'roles'));
     }
+
     public function registrasiPage()
     {
 
