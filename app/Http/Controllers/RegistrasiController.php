@@ -57,6 +57,8 @@ class RegistrasiController extends Controller
             $user->no_telp = $request->no_telp;
             $user->save();
 
+            $user->assignRole('ortu');
+
             Registrasi::create([
                 'id_user' => $user->id,
                 'nama_lengkap_anak' => $request->nama_lengkap_anak,
