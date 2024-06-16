@@ -59,6 +59,7 @@
                     </li>
                     <li><a href="/information" class="nav-link">Media dan Informasi</a></li>
                     <li><a href="/facilities" class="nav-link">Sarana dan Prasarana</a></li>
+                    <li><a href="/registration" class="nav-link">Daftar</a></li>
                     <li><a href="/contact" class="nav-link">Kontak</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
