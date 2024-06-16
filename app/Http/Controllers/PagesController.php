@@ -59,22 +59,27 @@ class PagesController extends Controller
         return view('pages.auth.login');
     }
 
+
+
     public function dashboardPage()
     {
         $user = Auth::user();
         $roles = $user->roles->pluck('name');
-        $registrasi = Registrasi::where('id_user', $user->id)->first();
+        $statusRegistration = Registrasi::where('id_user', $user->id)->first();
+
+        $registration = Registrasi::query()->get();
+
 
         if (!Auth::check()) {
             return redirect('/login');
         }
 
         if ($roles->contains('ortu')) {
-            if ($registrasi->status == array_search('false', Registrasi::getStatusOptions())) {
+            if ($statusRegistration->status == array_search('false', Registrasi::getStatusOptions())) {
                 Auth::logout();
                 return redirect('/login')->with('ERROR', 'Pendaftaran belum dikonfirmasi oleh Admin.');
             } else {
-                return view('pages.admin.dashboard', compact('user', 'roles'));
+                return view('pages.ortu.dashboard', compact('user', 'roles', 'registration'));
             }
         } else {
             return view('pages.admin.dashboard', compact('user', 'roles'));
@@ -91,6 +96,18 @@ class PagesController extends Controller
 
         return view('pages.admin.registrasi', compact('user', 'roles', 'registration'));
     }
+
+    public function detailPage($id)
+    {
+
+        $user = Auth::user();
+        $roles = $user->roles->pluck('name');
+
+        $registration = Registrasi::find($id);
+
+        return view('pages.ortu.detail-registration', compact('user', 'roles', 'registration'));
+    }
+
     public function informasiPage()
     {
 
