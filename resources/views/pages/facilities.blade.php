@@ -18,7 +18,7 @@
             <nav class="breadcrumbs">
                 <ol>
                     <li><a href="/">Home</a></li>
-                    <li class="/visi">facilities and infrastructure</li>
+                    <li class="/visi">Facilities and Infrastructure</li>
                 </ol>
             </nav>
         </div>

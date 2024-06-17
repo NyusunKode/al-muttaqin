@@ -93,19 +93,20 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Klik Cepat</h4>
                     <ul>
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#">Media dan Informasi</a></li>
-                        <li><a href="#">Sarana dan Prasarana</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/information">Media dan Informasi</a></li>
+                        <li><a href="/facilities">Sarana dan Prasarana</a></li>
+                        <li><a href="/registration">Daftar</a></li>
+                        <li><a href="/contact">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Tentang TPA</h4>
+                    <h4>Tentang Kami</h4>
                     <ul>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
+                        <li><a href="/visi">Visi dan Misi</a></li>
+                        <li><a href="/histori">Sejarah Singkat</a></li>
+                        <li><a href="/teacher">Tenaga Pendidik</a></li>
                     </ul>
                 </div>
 
