@@ -46,7 +46,7 @@
                             <h4 class="card-title mx-3">Data</h4>
                         </div>
                         <div class="table-responsive">
-                            <table id="zero_config" class="table table-striped table-bordered no-wrap datatable w-100">
+                            <table class="table table-striped table-bordered datatable w-100">
                                 <thead>
                                     <tr>
                                         <th class="text-center">No</th>
@@ -64,7 +64,9 @@
                                                     class="font-weight-medium link">{{ $item->judul }}</a></td>
                                             <td class="text-center"><img height="100"
                                                     src="{{ asset('storage/' . $item->thumbnail) }}" alt=""></td>
-                                            <td class="text-center">{{ $item->isi }}</td>
+                                            <td class="text-justify">
+                                                {{ substr($item->isi, 0, 100) }}{{ strlen($item->isi) > 100 ? '...' : '' }}
+                                            </td>
                                             <td class="text-center">
                                                 <div class="dropdown sub-dropdown">
                                                     <button class="btn btn-link text-muted dropdown-toggle" type="button"
@@ -92,7 +94,7 @@
                                         </tr>
                                     @endforeach
                                 </tbody>
-                                @extends('pages.admin.modals.edit-modal')
+                                @include('pages.admin.modals.edit-modal')
                             </table>
                         </div>
                     </div>

@@ -24,6 +24,7 @@ Route::get('/visi', [PagesController::class, 'visiPage'])->name('visi');
 Route::get('/histori', [PagesController::class, 'historiPage'])->name('histori');
 Route::get('/teacher', [PagesController::class, 'teacherPage'])->name('teacher');
 Route::get('/information', [PagesController::class, 'informationPage'])->name('information');
+Route::get('/detail-information/{id}', [PagesController::class, 'detailInformationPage'])->name('detail-information');
 Route::get('/facilities', [PagesController::class, 'facilitiesPage'])->name('facilities');
 Route::get('/contact', [PagesController::class, 'contactPage'])->name('contact');
 Route::get('/registration', [PagesController::class, 'registrationPage'])->name('registration');
@@ -39,8 +40,8 @@ Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('infor
 Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name('insertInformasi')->middleware('auth');
 Route::put('/informasi/edit/{id}', [InformasiController::class, 'updateData'])->name('editInformasi')->middleware('auth');
 Route::delete('/informasi/delete/{id}', [InformasiController::class, 'destroyData'])->name('destroyInformasi')->middleware('auth');
-Route::get('/akun-whatsapp', [PagesController::class, 'akunPage'])->name('akun')->middleware('auth');
-Route::post('/generate-qr', [SessionController::class, 'generateQr'])->name('generator-qr')->middleware('auth');
+// Route::get('/akusn-whatsapp', [PagesController::class, 'akunPage'])->name('akun')->middleware('auth');
+// Route::post('/gsenerate-qr', [SessionController::class, 'generateQr'])->name('generator-qr')->middleware('auth');
 
 // Controller Admin
 Route::post('/login', [AuthController::class, 'login']);

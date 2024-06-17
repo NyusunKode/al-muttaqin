@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\informasi;
+use App\Models\Informasi;
 use App\Models\Registrasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function homePage()
     {
-        $informasi = informasi::query()->get();
+        $informasi = Informasi::orderBy('id', 'DESC')->take(3)->get();
 
         return view('pages.home', compact('informasi'));
     }
@@ -49,6 +49,14 @@ class PagesController extends Controller
         return view('pages.information', compact('user', 'informasi'));
     }
 
+    public function detailInformationPage($id)
+    {
+        $user = Auth::user();
+        $informasi = Informasi::find($id);
+
+        return view('pages.detail-information', compact('user', 'informasi'));
+    }
+
     public function registrationPage()
     {
         return view('pages.registration');
@@ -58,8 +66,6 @@ class PagesController extends Controller
     {
         return view('pages.auth.login');
     }
-
-
 
     public function dashboardPage()
     {
@@ -118,12 +124,12 @@ class PagesController extends Controller
         return view('pages.admin.informasi', compact('user', 'roles', 'informasi'));
     }
 
-    public function akunPage()
-    {
+    // public function akunPage()
+    // {
 
-        $user = Auth::user();
-        $roles = $user->roles->pluck('name');
+    //     $user = Auth::user();
+    //     $roles = $user->roles->pluck('name');
 
-        return view('pages.admin.akun', compact('user', 'roles'));
-    }
+    //     return view('pages.admin.akun',, compact('user', 'roles'));
+    // }
 }

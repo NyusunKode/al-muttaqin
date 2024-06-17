@@ -18,55 +18,11 @@
                     <p data-aos="fade-up" data-aos-delay="100">
                         Jalan PDAM Km 12 Rt 18 Karang-Joang, Balikpapan Utara
                     </p>
-
-                    {{-- <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <input type="text" class="form-control" placeholder="Your ZIP code or City. e.g. New York">
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </form> --}}
-
-                    {{-- <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
-
-                        <div class="col-lg-3 col-6">
-                            <div class="stats-item text-center w-100 h-100">
-                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0"
-                                    class="purecounter">232</span>
-                                <p>Clients</p>
-                            </div>
-                        </div><!-- End Stats Item -->
-
-                        <div class="col-lg-3 col-6">
-                            <div class="stats-item text-center w-100 h-100">
-                                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="0"
-                                    class="purecounter">521</span>
-                                <p>Projects</p>
-                            </div>
-                        </div><!-- End Stats Item -->
-
-                        <div class="col-lg-3 col-6">
-                            <div class="stats-item text-center w-100 h-100">
-                                <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0"
-                                    class="purecounter">1453</span>
-                                <p>Support</p>
-                            </div>
-                        </div><!-- End Stats Item -->
-
-                        <div class="col-lg-3 col-6">
-                            <div class="stats-item text-center w-100 h-100">
-                                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0"
-                                    class="purecounter">32</span>
-                                <p>Workers</p>
-                            </div>
-                        </div><!-- End Stats Item -->
-
-                    </div> --}}
-
                 </div>
 
                 <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                    <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
+                    <img src="{{ asset('assets/img/poster.png') }}" class="img-fluid mb-lg-0" alt="hero" width="100%">
                 </div>
-
             </div>
         </div>
 
@@ -153,7 +109,7 @@
 
                 <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
                     data-aos-delay="200">
-                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                    <img src="{{ asset('assets/img/BANTPA.png') }}" class="img-fluid" alt="">
                     <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
                 </div>
 
@@ -222,10 +178,18 @@
                     <div class="col-lg-4 col-md-6 h-100" data-aos="fade-up" data-aos-delay="100">
                         <div class="card">
                             <div class="card-img">
-                                <img src="{{ asset('storage/' . $informasi->thumbnail) }}" alt="" class="img-fluid">
+                                <a href="/detail-informasi/{{ $informasi->id }}">
+                                    <img src="{{ asset('storage/' . $informasi->thumbnail) }}" alt=""
+                                        class="img-fluid">
+                                </a>
                             </div>
                             <h3>{{ $informasi->judul }}</h3>
-                            <p>{{ $informasi->isi }}</p>
+                            <p>
+                                {{ substr($informasi->isi, 0, 150) }}{{ strlen($informasi->isi) > 150 ? '...' : '' }}
+                            </p>
+                            <a href="/detail-information/{{ $informasi->id }}" class="btn btn-primary m-2 text-white">
+                                Read More
+                            </a>
                         </div>
                     </div><!-- End Card Item -->
                 @endforeach
@@ -264,7 +228,7 @@
 
             <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-                    <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
+                    <img src="{{ asset('assets/img/full tpa.jpg') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
                     <h3>Tenaga Pendidik</h3>
@@ -293,7 +257,7 @@
             <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out"
                     data-aos-delay="200">
-                    <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
+                    <img src="{{ asset('assets/img/parkiran.jpg') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
                     <h3>Sarana dan Prasarana</h3>
@@ -309,10 +273,11 @@
             </div><!-- Features Item -->
 
             <div class="row gy-4 align-items-center features-item">
-                <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-                    <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
+                <div class="col-md-3 d-flex align-items-center" data-aos="zoom-out">
+                    <img src="{{ asset('assets/img/struktur organisasi.png') }}" class="img-fluid text-center"
+                        alt="struktur-organisasi">
                 </div>
-                <div class="col-md-7" data-aos="fade-up">
+                <div class="col-md-9" data-aos="fade-up">
                     <h3>Struktur Organisasi</h3>
                     <p>
                         Struktur Pengurus pada Taman Pendidikan Al-Quran Al-Muttaqin unit 062
@@ -524,9 +489,10 @@
                             <i class="faq-icon bi bi-question-circle"></i>
                             <h3>Bagaimana cara mendaftarkan calon santri secara Online?</h3>
                             <div class="faq-content">
-                                <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                    rhoncus dolor purus non.</p>
+                                <p>
+                                    Orang Tua dapat mengakses website TK TPA AL-MUTTAQIN dengan bertanya pada
+                                    ustadzah/guru ngaji.
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -535,10 +501,11 @@
                             <i class="faq-icon bi bi-question-circle"></i>
                             <h3>Syarat apa saja yang di perlukan untuk mendaftarkan anak saya ke TK TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
-                                <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                    Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                <p>
+                                    Dokumen yang di perlukan adalah:
+                                    - Scan KK
+                                    - Scan Akte Kelahiran
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -547,10 +514,10 @@
                             <i class="faq-icon bi bi-question-circle"></i>
                             <h3>Apa saja yang di pelajari selama menempuh pendidikan di TK TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
-                                <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                    Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                    suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                    convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                <p>
+                                    Santri akan mendapatkan pelajaran berupa: Membaca Al-Quran, Menghafal Surah,
+                                    Menulis Huruf Hijaiyah, Belajar Sejarah Islam, Belajar Ilmu Tajwid dan Wisuda
+                                    Munaqosyah.
                                 </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
@@ -560,10 +527,10 @@
                             <i class="faq-icon bi bi-question-circle"></i>
                             <h3>Fasilitas apa saja yang ada di TPA AL-MUTTAQIN?</h3>
                             <div class="faq-content">
-                                <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                    Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                                <p>
+                                    Terdapat Masjid, Area Parkir dan Kamar Mandi yang berada di area TPA
+                                    AL-MUTTAQIN.
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->

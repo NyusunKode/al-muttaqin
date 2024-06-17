@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-master')
+{{-- @extends('layouts.dashboard-master')
 
 @section('title', 'Registrasi')
 
@@ -34,4 +34,4 @@
 @endsection
 
 @section('script')
-@endsection
+@endsection --}}
