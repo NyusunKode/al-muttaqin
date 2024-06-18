@@ -73,8 +73,7 @@ class PagesController extends Controller
         $roles = $user->roles->pluck('name');
         $statusRegistration = Registrasi::where('id_user', $user->id)->first();
 
-        $registration = Registrasi::query()->get();
-
+        $registration = Registrasi::query()->where('id_user', $user->id)->get();
 
         if (!Auth::check()) {
             return redirect('/login');
