@@ -70,26 +70,26 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <div class="navbar-brand">
+                    <div class="navbar-brand" style="padding-top: 30px">
                         <!-- Logo icon -->
                         <a href="index.html">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
+                                {{-- <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
                                     class="dark-logo" />
                                 <!-- Light Logo icon -->
                                 <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
-                                    class="light-logo" />
+                                    class="light-logo" /> --}}
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
                             <span class="logo-text">
                                 <!-- dark Logo text -->
-                                <img src="{{ asset('admin-assets/images/logo-text.png') }}" alt="homepage"
+                                <img src="{{ asset('admin-assets/images/logobaruu.jpg') }}" alt="homepage"
                                     class="dark-logo" />
                                 <!-- Light Logo text -->
-                                <img src="{{ asset('admin-assets/images/logo-light-text.png') }}" class="light-logo"
-                                    alt="homepage" />
+                                {{-- <img src="{{ asset('admin-assets/images/logo-light-text.png') }}" class="light-logo"
+                                    alt="homepage" /> --}}
                             </span>
                         </a>
                     </div>
