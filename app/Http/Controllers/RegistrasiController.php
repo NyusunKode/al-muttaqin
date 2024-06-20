@@ -24,7 +24,6 @@ class RegistrasiController extends Controller
             'nik' => 'required|numeric',
             'jenis_kelamin' => 'required|string',
             'anak_ke' => 'required|numeric',
-            'agama' => 'required|string',
             'pendidikan_anak' => 'required|string',
             'alamat_anak' => 'required|string',
             'pekerjaan_ortu' => 'required|string',
@@ -67,7 +66,6 @@ class RegistrasiController extends Controller
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'ttl_anak' => $ttl_anak,
                 'anak_ke' => $request->anak_ke,
-                'agama' => $request->agama,
                 'pendidikan_anak' => $request->pendidikan_anak,
                 'alamat_anak' => $request->alamat_anak,
                 'ttl_ortu' => $ttl_ortu,
@@ -96,9 +94,8 @@ Pendaftaran santri atas nama [name_anak] di Taman Pendidikan Al-Quran [TPA AL-MU
 Wassalamu'alaikum.
 
 Hormat kami,
-Pengurus [TPA AL-MUTTAQIN UNIT 062]";
+Pengurus [TPA AL-MUTTAQIN UNIT 062]";
 
-            // Mengganti [nama_anak] dengan nama anak sebenarnya
             $caption = str_replace("[name_anak]", $name_anak, $caption_template);
 
             $response = $client->post(env('URL_WA_SERVER') . '/john/messages/send', [
@@ -106,12 +103,10 @@ Pengurus [TPA AL-MUTTAQIN UNIT 062]";
                     'jid' => $formatted_nomor_wa . '@s.whatsapp.net',
                     'type' => 'number',
                     'message' => [
-                        'image' => ['url' => 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1644309716/hogdkkpwy5mlftetyo9l.jpg'],
-                        'caption' => $caption
+                        'text' => $caption
                     ]
                 ]
             ]);
-
 
             if ($response->getStatusCode() != 200) {
                 Log::error('Error sending WhatsApp message:', ['response' => $response->getBody()->getContents()]);
@@ -146,8 +141,7 @@ Pengurus [TPA AL-MUTTAQIN UNIT 062]";
                     'jid' => $formatted_nomor_wa . '@s.whatsapp.net',
                     'type' => 'number',
                     'message' => [
-                        'image' => ['url' => 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1644309716/hogdkkpwy5mlftetyo9l.jpg'],
-                        'caption' => 'KONFIRMASI PENDAFTARAN SANTRI BARU
+                        'text' => 'KONFIRMASI PENDAFTARAN SANTRI BARU
 
 Assalamualaikum,
 
@@ -156,14 +150,14 @@ Selamat, pendaftaran anak Anda telah berhasil. Anak Anda dinyatakan resmi menjad
 Wassalamualaikum.
 
 Hormat kami,
-Pengurus [TPA AL-MUTTAQIN UNIT 062]'
+Pengurus [TPA AL-MUTTAQIN UNIT 062]'
                     ]
                 ]
             ]);
 
             if ($response->getStatusCode() != 200) {
                 Log::error('Error sending WhatsApp message:', ['response' => $response->getBody()->getContents()]);
-                return redirect()->back()->with('ERROR', 'Pendaftaran berhasil, tetapi gagal mengirim pesan WhatsApp.');
+                return redirect()->back()->with('ERROR', 'Pendaftaran dikonfirmasi, tetapi gagal mengirim pesan WhatsApp.');
             }
         } catch (\Exception $e) {
             Log::error('Error register:', ['error' => $e->getMessage()]);
@@ -171,5 +165,54 @@ Pengurus [TPA AL-MUTTAQIN UNIT 062]'
         }
 
         return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil diterima.');
+    }
+
+    public function rejectRegistration($id)
+    {
+        $registration = Registrasi::findOrFail($id);
+        $user = User::findOrFail($registration->id_user);
+
+        try {
+            $formatted_nomor_wa = $registration->user->no_telp;
+
+            if (substr($formatted_nomor_wa, 0, 2) === '08') {
+                $formatted_nomor_wa = '62' . substr($formatted_nomor_wa, 1);
+            } elseif (substr($formatted_nomor_wa, 0, 1) === '0') {
+                $formatted_nomor_wa = '62' . substr($formatted_nomor_wa, 1);
+            }
+
+            $registration->delete();
+            $user->delete();
+
+            $client = new Client();
+            $response = $client->post(env('URL_WA_SERVER') . '/john/messages/send', [
+                'json' => [
+                    'jid' => $formatted_nomor_wa . '@s.whatsapp.net',
+                    'type' => 'number',
+                    'message' => [
+                        'text' => 'KONFIRMASI PENDAFTARAN
+
+Assalamualaikum,
+
+Kami mohon maaf, pendaftaran anak anda tidak dapat kami terima karena berkas tidak lengkap dan umur anak tidak sesuai. Terima kasih atas pengertiannya.
+
+Wassalamualaikum.
+
+Hormat kami,
+Pengurus [TPA AL-MUTTAQIN UNIT 062]'
+                    ]
+                ]
+            ]);
+
+            if ($response->getStatusCode() != 200) {
+                Log::error('Error sending WhatsApp message:', ['response' => $response->getBody()->getContents()]);
+                return redirect()->back()->with('ERROR', 'Pendaftaran ditolak, tetapi gagal mengirim pesan WhatsApp.');
+            }
+        } catch (\Exception $e) {
+            Log::error('Error register:', ['error' => $e->getMessage()]);
+            return redirect()->back()->with('ERROR', 'Gagal melakukan penolakan.');
+        }
+
+        return redirect()->back()->with('SUCCESS', 'Pendaftaran berhasil ditolak.');
     }
 }

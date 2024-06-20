@@ -5,7 +5,7 @@
 
 @section('container')
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section" style="height: 100vh">
 
         <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
 

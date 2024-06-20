@@ -70,11 +70,6 @@
                             </li>
                             <li class="d-flex align-items-center mb-3">
                                 <i data-feather="check-square"></i>
-                                <span class="fw-medium mx-2 text-heading">Agama :</span>
-                                <span>{{ $registration->agama }}</span>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <i data-feather="check-square"></i>
                                 <span class="fw-medium mx-2 text-heading">Pendidikan:</span>
                                 <span>{{ $registration->pendidikan_anak }}</span>
                             </li>

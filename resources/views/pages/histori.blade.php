@@ -40,17 +40,26 @@
 
                     <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
                         data-aos-delay="200">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/img/BANTPA.png') }}" class="img-fluid" alt="">
                         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
                     </div>
 
                     <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
                         <h3>Tentang TKA/TPA</h3>
                         <p>
-                            TPQ Al-Muttaqin Didirikan pada tahun 2005, dan berlokasi di daerah Jalan PDAM Km 12 Rt 18 Kelurahan Karang-Joang, Kecamatan Balikpapan Utara, Kota Balikpapan, Kalimantan Timur. Pendidikan Al-Quran bagi anak usia dini dan anak-anak TKA, TPA, dan TQA menjadi salah satu program utama di BKPRMI dengan LPPTKA (Lembaga Pembinaan dan Pengembangan TKA/TPQ Al-Quran) sebagai ujung tombak di dalam pelaksanaannya.
+                            TPQ Al-Muttaqin Didirikan pada tahun 2005, dan berlokasi di daerah Jalan PDAM Km 12 Rt 18
+                            Kelurahan Karang-Joang, Kecamatan Balikpapan Utara, Kota Balikpapan, Kalimantan Timur.
+                            Pendidikan Al-Quran bagi anak usia dini dan anak-anak TKA, TPA, dan TQA menjadi salah satu
+                            program utama di BKPRMI dengan LPPTKA (Lembaga Pembinaan dan Pengembangan TKA/TPQ Al-Quran)
+                            sebagai ujung tombak di dalam pelaksanaannya.
                         </p>
                         <p>
-                            Dengan dibekali Ustadzah yang berpendidikan dan bersertifikat maka pengajaran terhadap anak-anak pasti akan berkualitas. Ustadzah yang mengajar di TPQ Al-Muttaqin terdiri dari 8 orang Ustadzah dan 1 Ustadzah yang berperan sebagai admin. Untuk pendaftar santri baru tiap tahun ajaran baru mencapai sekitar 100 santri. Pendaftar rata-rata berusia 5 sampai 12 tahun, orang tua mendaftarkan anak mereka untuk memberikan pengajaran membaca Al-Qur'an menyiapkan Generasi Qur'ani menyongsong masa depan gemilang.
+                            Dengan dibekali Ustadzah yang berpendidikan dan bersertifikat maka pengajaran terhadap anak-anak
+                            pasti akan berkualitas. Ustadzah yang mengajar di TPQ Al-Muttaqin terdiri dari 8 orang Ustadzah
+                            dan 1 Ustadzah yang berperan sebagai admin. Untuk pendaftar santri baru tiap tahun ajaran baru
+                            mencapai sekitar 100 santri. Pendaftar rata-rata berusia 5 sampai 12 tahun, orang tua
+                            mendaftarkan anak mereka untuk memberikan pengajaran membaca Al-Qur'an menyiapkan Generasi
+                            Qur'ani menyongsong masa depan gemilang.
                         </p>
                         {{-- <ul>
                             <li>

@@ -60,8 +60,7 @@
                                     @foreach ($informasi as $index => $item)
                                         <tr>
                                             <td class="text-center">{{ $index + 1 }}</td>
-                                            <td class="text-center"><a href="javascript:void(0)"
-                                                    class="font-weight-medium link">{{ $item->judul }}</a></td>
+                                            <td class="text-center">{{ $item->judul }}</td>
                                             <td class="text-center"><img height="100"
                                                     src="{{ asset('storage/' . $item->thumbnail) }}" alt=""></td>
                                             <td class="text-justify">

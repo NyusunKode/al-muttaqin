@@ -134,15 +134,11 @@
                                     <input type="number" name="anak_ke" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="agama">Agama <span class="text-danger">*</span></label>
-                                    <input type="text" name="agama" class="form-control" required>
-                                </div>
-                                <div class="col-md-6">
                                     <label for="pendidikan_anak">Pendidikan Anak Saat Ini <span
                                             class="text-danger">*</span></label>
                                     <input type="text" name="pendidikan_anak" class="form-control" required>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="alamat_anak">Alamat Anak <span class="text-danger">*</span></label>
                                     <input type="text" name="alamat_anak" class="form-control" required>
                                 </div>

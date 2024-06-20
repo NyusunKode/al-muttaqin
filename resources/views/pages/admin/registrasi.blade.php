@@ -73,9 +73,17 @@
                                                             </button>
                                                         </form>
 
-                                                        <a class="dropdown-item" href="#">
+                                                        <form action="/reject-registration/{{ $registration->id }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            <button type="submit" class="dropdown-item" href="#">
+                                                                <i class="text-danger" data-feather="x"></i> Tolak
+                                                            </button>
+                                                        </form>
+
+                                                        {{-- <a class="dropdown-item" href="#">
                                                             <i class="text-danger" data-feather="x"></i> Tolak
-                                                        </a>
+                                                        </a> --}}
                                                     </div>
                                                 </div>
                                             </td>
