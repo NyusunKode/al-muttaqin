@@ -30,7 +30,6 @@ class Registrasi extends Model
         "jenis_kelamin",
         "ttl_anak",
         "anak_ke",
-        "agama",
         "pendidikan_anak",
         "alamat_anak",
         "ttl_ortu",

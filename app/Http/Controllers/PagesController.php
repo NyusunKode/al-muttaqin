@@ -75,6 +75,8 @@ class PagesController extends Controller
 
         $registration = Registrasi::query()->where('id_user', $user->id)->get();
 
+        $dataRegistration = Registrasi::query()->get();
+
         if (!Auth::check()) {
             return redirect('/login');
         }
@@ -87,7 +89,7 @@ class PagesController extends Controller
                 return view('pages.ortu.dashboard', compact('user', 'roles', 'registration'));
             }
         } else {
-            return view('pages.admin.dashboard', compact('user', 'roles'));
+            return view('pages.admin.dashboard', compact('user', 'roles', 'dataRegistration'));
         }
     }
 

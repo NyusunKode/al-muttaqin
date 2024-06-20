@@ -34,19 +34,22 @@ Route::get('/login', [PagesController::class, 'loginPage'])->name('login')->midd
 
 // Halaman Admin
 Route::get('/dashboard', [PagesController::class, 'dashboardPage'])->name('dashboard')->middleware('auth');
-Route::get('/detail-registrasi/{id}', [PagesController::class, 'detailPage'])->name('detail')->middleware('auth');
-Route::get('/registrasi', [PagesController::class, 'registrasiPage'])->name('registrasi')->middleware('auth');
-Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('informasi')->middleware('auth');
-Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name('insertInformasi')->middleware('auth');
-Route::put('/informasi/edit/{id}', [InformasiController::class, 'updateData'])->name('editInformasi')->middleware('auth');
-Route::delete('/informasi/delete/{id}', [InformasiController::class, 'destroyData'])->name('destroyInformasi')->middleware('auth');
+Route::get('/detail-registrasi/{id}', [PagesController::class, 'detailPage'])->name('detail')->middleware(['auth', 'role:ortu']);
+Route::get('/registrasi', [PagesController::class, 'registrasiPage'])->name('registrasi')->middleware(['auth', 'role:admin']);
+Route::get('/informasi', [PagesController::class, 'informasiPage'])->name('informasi')->middleware(['auth', 'role:admin']);
 // Route::get('/akusn-whatsapp', [PagesController::class, 'akunPage'])->name('akun')->middleware('auth');
 // Route::post('/gsenerate-qr', [SessionController::class, 'generateQr'])->name('generator-qr')->middleware('auth');
 
 // Controller Admin
+Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRegistration'])->middleware('auth');
+Route::post('/reject-registration/{id}', [RegistrasiController::class, 'rejectRegistration'])->middleware('auth');
+Route::post('/informasi/insert', [InformasiController::class, 'addData'])->name('insertInformasi')->middleware('auth');
+Route::put('/informasi/edit/{id}', [InformasiController::class, 'updateData'])->name('editInformasi')->middleware('auth');
+Route::delete('/informasi/delete/{id}', [InformasiController::class, 'destroyData'])->name('destroyInformasi')->middleware('auth');
+
+// Controller Authentikasi
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
-Route::post('/accept-registration/{id}', [RegistrasiController::class, 'acceptRegistration']);
 
 // Controller Umum
 Route::post('/register', [RegistrasiController::class, 'register']);
