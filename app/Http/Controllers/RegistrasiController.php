@@ -86,16 +86,32 @@ class RegistrasiController extends Controller
             }
 
             $client = new Client();
+            $name_anak = $request->nama_lengkap_anak;
+            $caption_template = "KONFIRMASI PENDAFTARAN SANTRI BARU
+
+Assalamu'alaikum,
+
+Pendaftaran santri atas nama [name_anak] di Taman Pendidikan Al-Quran [TPA AL-MUTTAQIN UNIT 062] telah berhasil. Harap tunggu verifikasi admin.
+
+Wassalamu'alaikum.
+
+Hormat kami,
+Pengurus [TPA AL-MUTTAQIN UNIT 062]";
+
+            // Mengganti [nama_anak] dengan nama anak sebenarnya
+            $caption = str_replace("[name_anak]", $name_anak, $caption_template);
+
             $response = $client->post(env('URL_WA_SERVER') . '/john/messages/send', [
                 'json' => [
                     'jid' => $formatted_nomor_wa . '@s.whatsapp.net',
                     'type' => 'number',
                     'message' => [
                         'image' => ['url' => 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1644309716/hogdkkpwy5mlftetyo9l.jpg'],
-                        'caption' => 'Pendaftaran telah berhasil dilakukan! Harap tunggu admin menerima dan mengkonfirmasi pendaftaran anda. Terimakasih 😉'
+                        'caption' => $caption
                     ]
                 ]
             ]);
+
 
             if ($response->getStatusCode() != 200) {
                 Log::error('Error sending WhatsApp message:', ['response' => $response->getBody()->getContents()]);
@@ -131,7 +147,16 @@ class RegistrasiController extends Controller
                     'type' => 'number',
                     'message' => [
                         'image' => ['url' => 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1644309716/hogdkkpwy5mlftetyo9l.jpg'],
-                        'caption' => 'Ini paki dan ngetes BOT. Terimakasih 😉'
+                        'caption' => 'KONFIRMASI PENDAFTARAN SANTRI BARU
+
+Assalamualaikum,
+
+Selamat, pendaftaran anak Anda telah berhasil. Anak Anda dinyatakan resmi menjadi santri di TPA Al Muttaqin. Harap hadir tepat waktu pada jam pembelajaran di TPA.
+
+Wassalamualaikum.
+
+Hormat kami,
+Pengurus [TPA AL-MUTTAQIN UNIT 062]'
                     ]
                 ]
             ]);
