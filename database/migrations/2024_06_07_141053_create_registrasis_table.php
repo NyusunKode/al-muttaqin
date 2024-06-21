@@ -13,11 +13,23 @@ return new class extends Migration
     {
         Schema::create('registrasis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_ortu');
-            $table->string('nama_anak');
-            $table->string('nomor_wa');
+            $table->bigInteger('id_user')->unsigned();
+            $table->string('nama_lengkap_anak');
+            $table->string('nama_panggilan_anak');
+            $table->string('nik');
+            $table->string('jenis_kelamin');
+            $table->string('ttl_anak');
+            $table->string('anak_ke');
+            $table->string('pendidikan_anak');
+            $table->string('alamat_anak');
+            $table->string('ttl_ortu');
+            $table->string('pekerjaan_ortu');
+            $table->string('pendidikan_ortu');
+            $table->string('alamat_ortu');
             $table->string('status')->nullable();
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 

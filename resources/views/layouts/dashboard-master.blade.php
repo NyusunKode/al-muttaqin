@@ -18,6 +18,21 @@
     <!-- Custom CSS -->
     <link href="{{ asset('dist/css/style.min.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- END: Page CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,26 +70,26 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <div class="navbar-brand">
+                    <div class="navbar-brand" style="padding-top: 30px">
                         <!-- Logo icon -->
                         <a href="index.html">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
+                                {{-- <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
                                     class="dark-logo" />
                                 <!-- Light Logo icon -->
                                 <img src="{{ asset('admin-assets/images/logo-icon.png') }}" alt="homepage"
-                                    class="light-logo" />
+                                    class="light-logo" /> --}}
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
                             <span class="logo-text">
                                 <!-- dark Logo text -->
-                                <img src="{{ asset('admin-assets/images/logo-text.png') }}" alt="homepage"
+                                <img src="{{ asset('admin-assets/images/logobaruu.jpg') }}" alt="homepage"
                                     class="dark-logo" />
                                 <!-- Light Logo text -->
-                                <img src="{{ asset('admin-assets/images/logo-light-text.png') }}" class="light-logo"
-                                    alt="homepage" />
+                                {{-- <img src="{{ asset('admin-assets/images/logo-light-text.png') }}" class="light-logo"
+                                    alt="homepage" /> --}}
                             </span>
                         </a>
                     </div>
@@ -98,7 +113,7 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                         <!-- Notification -->
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
                                 id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -200,7 +215,7 @@
                                     </select>
                                 </div>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
@@ -209,17 +224,6 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <form>
-                                    <div class="customize-input">
-                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                            type="search" placeholder="Search" aria-label="Search">
-                                        <i class="form-control-icon" data-feather="search"></i>
-                                    </div>
-                                </form>
-                            </a>
-                        </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -232,7 +236,11 @@
                                         class="text-dark">{{ $user->name }}</span> <i data-feather="chevron-down"
                                         class="svg-icon"></i></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                            <div class="dropdown-menu w-100">
+                                <a href="#" class="dropdown-item">
+                                    <i data-feather="user" class="svg-icon mr-2 ml-1"></i>
+                                    My Profile
+                                </a>
                                 <form action="/logout" method="POST">
                                     @csrf
                                     <button class="dropdown-item" type="submit"><i data-feather="power"
@@ -263,18 +271,22 @@
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/dashboard"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/registrasi"
-                                aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
-                                    class="hide-menu">Registrasi</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/informasi"
-                                aria-expanded="false"><i data-feather="layers" class="feather-icon"></i><span
-                                    class="hide-menu">Informasi</span></a></li>
+                                    @if ($roles->contains('admin'))
 
+                                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/registrasi"
+                                            aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
+                                                class="hide-menu">Registrasi</span></a></li>
+                                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/informasi"
+                                            aria-expanded="false"><i data-feather="layers" class="feather-icon"></i><span
+                                                class="hide-menu">Informasi</span></a></li>
+                                    {{-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/akun-whatsapp"
+                                            aria-expanded="false"><asi data-feather="link" class="feather-icon"></i><span
+                                                class="hide-menu">Akun Whatsapp</span></a></li> --}}
+                                    @endif
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
-            <!-- End Sidebar scroll-->
         </aside>
         <div class="page-wrapper">
 
@@ -328,6 +340,24 @@
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.flash.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    @if (session('SUCCESS'))
+        <script>
+            toastr.success('{!! session('SUCCESS') !!}', 'Success!');
+        </script>
+    @endif
+    @if (session('ERROR'))
+        <script>
+            toastr.error('{!! session('ERROR') !!}', 'Error!');
+        </script>
+    @endif
 
     <script>
         $('.datatable').DataTable();

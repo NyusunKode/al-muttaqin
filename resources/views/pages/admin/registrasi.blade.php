@@ -54,9 +54,9 @@
                                     @foreach ($registration as $registration)
                                         <tr>
                                             <td class="text-center">{{ $registration->id }}</td>
-                                            <td class="text-center">{{ $registration->nama_ortu }}</td>
-                                            <td class="text-center">{{ $registration->nama_anak }}</td>
-                                            <td class="text-center">{{ $registration->nomor_wa }}</td>
+                                            <td class="text-center">{{ $registration->user->name }}</td>
+                                            <td class="text-center">{{ $registration->nama_lengkap_anak }}</td>
+                                            <td class="text-center">{{ $registration->user->no_telp }}</td>
                                             <td class="text-center">
                                                 <div class="dropdown sub-dropdown">
                                                     <button class="btn btn-link text-muted dropdown-toggle" type="button"
@@ -65,16 +65,25 @@
                                                         <i data-feather="chevron-down"></i>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                                        <form action="/accept-registration/{{ $registration->id }}" method="POST">
+                                                        <form action="/accept-registration/{{ $registration->id }}"
+                                                            method="POST">
                                                             @csrf
-                                                            <button type="submit" class="dropdown-item">
+                                                            <button type="submit" class="dropdown-item" href="#">
                                                                 <i class="text-success" data-feather="check"></i> Konfirmasi
                                                             </button>
                                                         </form>
-                                                        
-                                                        <a class="dropdown-item" href="#">
+
+                                                        <form action="/reject-registration/{{ $registration->id }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            <button type="submit" class="dropdown-item" href="#">
+                                                                <i class="text-danger" data-feather="x"></i> Tolak
+                                                            </button>
+                                                        </form>
+
+                                                        {{-- <a class="dropdown-item" href="#">
                                                             <i class="text-danger" data-feather="x"></i> Tolak
-                                                        </a>
+                                                        </a> --}}
                                                     </div>
                                                 </div>
                                             </td>

@@ -46,32 +46,21 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/" class="active">Beranda<br></a></li>
+                    <li><a href="/" class="nav-link">Beranda<br></a></li>
                     <li class="dropdown">
-                        <a href="#"><span>Tentang Kami</span>
+                        <a href="#" class="tentang-kami-link"><span>Tentang Kami</span>
                             <i class="bi bi-chevron-down toggle-dropdown"></i>
                         </a>
-
                         <ul>
-                            <li><a href="/visi">Visi dan Misi</a></li>
-                            {{-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                        class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Dropdown 1</a></li>
-                                    <li><a href="#">Deep Dropdown 2</a></li>
-                                    <li><a href="#">Deep Dropdown 3</a></li>
-                                    <li><a href="#">Deep Dropdown 4</a></li>
-                                    <li><a href="#">Deep Dropdown 5</a></li>
-                                </ul>
-                            </li> --}}
-                            <li><a href="#">Sejarah Singkat</a></li>
-                            <li><a href="#">Tenaga Pendidik</a></li>
-
+                            <li><a href="/visi" class="nav-link">Visi dan Misi</a></li>
+                            <li><a href="/histori" class="nav-link">Sejarah Singkat</a></li>
+                            <li><a href="/teacher" class="nav-link">Tenaga Pendidik</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Media dan Informasi</a></li>
-                    <li><a href="#">Sarana dan Prasarana</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="/information" class="nav-link">Media dan Informasi</a></li>
+                    <li><a href="/facilities" class="nav-link">Sarana dan Prasarana</a></li>
+                    <li><a href="/contact" class="nav-link">Kontak</a></li>
+                    <li><a href="/registration" class="nav-link">Daftar</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -104,19 +93,20 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Klik Cepat</h4>
                     <ul>
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#">Media dan Informasi</a></li>
-                        <li><a href="#">Sarana dan Prasarana</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/information">Media dan Informasi</a></li>
+                        <li><a href="/facilities">Sarana dan Prasarana</a></li>
+                        <li><a href="/contact">Kontak</a></li>
+                        <li><a href="/registration">Daftar</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Tentang TPA</h4>
+                    <h4>Tentang Kami</h4>
                     <ul>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">Example</a></li>
+                        <li><a href="/visi">Visi dan Misi</a></li>
+                        <li><a href="/histori">Sejarah Singkat</a></li>
+                        <li><a href="/teacher">Tenaga Pendidik</a></li>
                     </ul>
                 </div>
 
@@ -161,6 +151,26 @@
     <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
     <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentUrl = window.location.pathname;
+            var navLinks = document.querySelectorAll('.nav-link');
+            var tentangKamiLink = document.querySelector('.tentang-kami-link');
+            var tentangKamiPages = ['/visi', '/histori', '/teacher'];
+
+            navLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentUrl) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Check if the current URL is one of the Tentang Kami pages
+            if (tentangKamiPages.includes(currentUrl)) {
+                tentangKamiLink.classList.add('active');
+            }
+        });
+    </script>
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
